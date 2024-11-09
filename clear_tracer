@@ -1,0 +1,6 @@
+#!/bin/bash
+
+ssh wazuh-cowrie   'rm "/home/user/cowrie/tracer_logs/"*'
+ssh wazuh-attacker 'rm "/home/user/cowrie/tracer_logs/"*'
+ssh wazuh-engage   'rm "/home/wazuh/cowrie/tracer_logs/"*'
+

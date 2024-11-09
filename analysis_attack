@@ -1,0 +1,21 @@
+#!/usr/bin/env python
+
+
+from pathlib import Path
+
+from tracer import DEFAULT_BASE_DIR, check_default_base_dir
+from tracer import AttackGraph
+
+
+if check_default_base_dir():
+    target_dir = Path(DEFAULT_BASE_DIR) / 'analysis_attack'
+    target_dir.mkdir()
+
+    ag = AttackGraph(str(Path(DEFAULT_BASE_DIR) / Path('merge.log')))
+    ag.plot_attack_path(str(target_dir))
+    ag.plot_session_len(str(DEFAULT_BASE_DIR))
+    ag.plot_session_len_range(str(DEFAULT_BASE_DIR))
+    ag.plot_command_used(str(DEFAULT_BASE_DIR))
+
+else:
+    print(f'Default directory does NOT exist: "{DEFAULT_BASE_DIR}"')

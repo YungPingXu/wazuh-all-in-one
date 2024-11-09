@@ -1,0 +1,11 @@
+{
+    "phrase_replace": {
+        "lifetime": 10
+    },
+    "backend": {
+        "username": "",
+        "password": "",
+        "root_password": "",
+        "sudo_hidden_phrase": ""
+    }
+}

@@ -1,0 +1,6 @@
+
+import action_matrix
+
+
+action_matrix.activity2action_demo(action_matrix.MAPPING_ACTIVITY2ACTION)
+action_matrix.action2activity_demo(action_matrix.MAPPING_ACTION2ACTIVITY)

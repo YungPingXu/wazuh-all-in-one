@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [[ -d var/log/cowrie ]]
+then
+    rm var/log/cowrie/*
+    touch var/log/cowrie/cowrie.log
+fi
+

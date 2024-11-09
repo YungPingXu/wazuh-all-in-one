@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [[ -z $1 ]]
+then
+    lines=10
+else
+    lines=$1
+fi
+
+watch -n 1 "tail -n $lines var/log/cowrie/cowrie.log"
+

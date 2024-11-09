@@ -1,0 +1,6 @@
+20241109_035436.317538 engage     DEBUG      Server is run in RUNTIME mode.
+20241109_040722.047786 engage     DEBUG      [1] Accepted connection from "127.0.0.1:54174". Client id is 1.
+20241109_040722.627664 engage     SUCCESS    [1] Selected action is 10 "Output the executed command normally with some version variation.".
+20241109_040728.145241 engage     DEBUG      [2] Accepted connection from "127.0.0.1:54190". Client id is 2.
+20241109_040728.170944 engage     SUCCESS    [2] Selected action is 7 "Redirect the access to another IP and allow command execution.".
+20241109_041414.283853 engage     DEBUG      [2] Disconnected from 127.0.0.1:54190 .

@@ -1,0 +1,36 @@
+# see all wazuh username and password
+sudo tar -O -xvf wazuh-install-files.tar wazuh-install-files/wazuh-passwords.txt
+
+sudo qemu-system-x86_64 -name qvm0 -smbios type=0,uefi=on -smp 2 -m 4096 -hda /home/user/qvm0.qcow2 -boot c -netdev bridge,br=br0,id=net0 -device e1000,netdev=net0,mac=52:54:00:12:43:00 -vnc 0.0.0.0:0
+sudo qemu-system-x86_64 -name qvm1 -smbios type=0,uefi=on -smp 2 -m 4096 -hda /home/user/qvm1.qcow2 -boot c -netdev bridge,br=br0,id=net0 -device e1000,netdev=net0,mac=52:54:00:12:43:01 -vnc 0.0.0.0:1
+sudo qemu-system-x86_64 -name qvm2 -smbios type=0,uefi=on -smp 2 -m 4096 -hda /home/user/qvm2.qcow2 -boot c -netdev bridge,br=br0,id=net0 -device e1000,netdev=net0,mac=52:54:00:12:43:02 -vnc 0.0.0.0:2
+
+source ~/Desktop/venv/bin/activate
+cd ~/Desktop/wazuh-all-in-one/src
+python3 iptables_applyer.py
+
+# use ssh connection to test qemu vm
+# password: lZupZLJVMS4UxVA8ZRVG (same for password in wazuh_interface.json)
+ssh root@192.168.4.59 -p 22
+
+# list qemu vms
+pgrep -U 0 -f qvm
+
+# kill qemu vms
+pgrep -U 0 -f qvm | sudo xargs kill
+
+source ~/Desktop/venv/bin/activate
+cd ~/Desktop/wazuh-all-in-one
+bin/cowrie start
+
+source ~/Desktop/venv/bin/activate
+cd ~/Desktop/wazuh-all-in-one/src/engage_handler
+python3 main.py
+
+ssh user@192.168.122.1 -p 2222
+sudo systemctl restart wazuh-manager
+
+sudo /var/ossec/bin/manage_agents
+4.7.5
+sudo /var/ossec/bin/wazuh-control -j info
+https://127.0.0.1:9200/wazuh-alerts-4.x-*/_search

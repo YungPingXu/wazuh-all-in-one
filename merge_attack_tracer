@@ -1,0 +1,13 @@
+#!/bin/bash
+
+export COWRIE_BASE_PATH='/home/user/Desktop/cowrie/src'
+export PYTHONPATH="$PYTHONPATH:/home/user/Desktop/cowrie/src"
+
+mkdir tracer_tmp
+
+rsync --progress -r wazuh-attacker:/home/user/cowrie/tracer_logs/ tracer_tmp/
+
+/home/user/VirtualEnv/cowrie/bin/python -c 'from pathlib import Path; from src.tracer import TracerGraph; files = [str(file.resolve()) for file in Path("tracer_tmp").glob("*")]; TracerGraph.merge_logs(files, "/home/user/Desktop/merge.log")'
+
+rm -r tracer_tmp
+

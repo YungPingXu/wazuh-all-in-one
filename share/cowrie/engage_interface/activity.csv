@@ -1,0 +1,32 @@
+ID,name
+EAC0001,API Monitoring
+EAC0002,Network Monitoring
+EAC0003,System Activity Monitoring
+EAC0004,Network Analysis
+EAC0005,Lures
+EAC0006,Application Diversity
+EAC0007,Network Diversity
+EAC0008,Burn-In
+EAC0009,Email Manipulation
+EAC0010,Peripheral Management
+EAC0011,Pocket Litter
+EAC0012,Personas
+EAC0013,Malware Detonation
+EAC0014,Software Manipulation
+EAC0015,Information Manipulation
+EAC0016,Network Manipulation
+EAC0017,Hardware Manipulation
+EAC0018,Security Controls
+EAC0019,Baseline
+EAC0020,Isolation
+EAC0021,Attack Vector Migration
+EAC0022,Artifact Diversity
+EAC0023,Introduced Vulnerabilities
+SAC0001,Operational Objective
+SAC0002,Persona Creation
+SAC0003,Storyboarding
+SAC0004,Cyber Threat Intelligence
+SAC0005,Gating Criteria
+SAC0006,After-Action Review
+SAC0012,Engagement Environment
+SAC0009,Threat Model

@@ -1,0 +1,99 @@
+﻿!!! OLD FILE !!!
+① Lures,S2 ⑥ Intentionally leak some important information in the file.
+① Lures,S2 ⑨ Replace system-related string from the executed command.
+① Lures,S2 ⑩ Trigger the phishing email and stuff with fake data.
+① Lures,S2 ⑬ Output the data normally with some version variation.
+① Lures,S3 ⑨ Replace system-related string from the executed command.
+① Lures,S3 ⑩ Trigger the phishing email and stuff with fake data.
+① Lures,S3 ⑬ Output the data normally with some version variation.
+① Lures,S3 ⑮ Add weak user to the system file.
+② Application Diversity,S2 ⑤ Replace specific string in the requested content.
+② Application Diversity,S2 ⑭ Redirect the access to another IP.
+② Application Diversity,S3 ⑤ Replace specific string in the requested content.
+② Application Diversity,S3 ⑭ Redirect the access to another IP.
+③ Network Diversity,S2 ⑤ Replace specific string in the requested content.
+③ Network Diversity,S2 ⑬ Output the data normally with some version variation.
+③ Network Diversity,S3 ⑤ Replace specific string in the requested content.
+③ Network Diversity,S3 ⑬ Output the data normally with some version variation.
+④ Burn-In,S2 ⑤ Replace specific string in the requested content.
+④ Burn-In,S2 ⑨ Replace system-related string from the executed command.
+④ Burn-In,S2 ⑬ Output the data normally with some version variation.
+④ Burn-In,S3 ⑤ Replace specific string in the requested content.
+④ Burn-In,S3 ⑨ Replace system-related string from the executed command.
+④ Burn-In,S3 ⑬ Output the data normally with some version variation.
+⑤ Email Manipulation,S2 ⑤ Replace specific string in the requested content.
+⑤ Email Manipulation,S2 ⑩ Trigger the phishing email and stuff with fake data.
+⑤ Email Manipulation,S3 ⑤ Replace specific string in the requested content.
+⑤ Email Manipulation,S3 ⑩ Trigger the phishing email and stuff with fake data.
+⑥ Software Manipulation,S2 ⑤ Replace specific string in the requested content.
+⑥ Software Manipulation,S2 ⑨ Replace system-related string from the executed command.
+⑥ Software Manipulation,S2 ⑪ Show part of output only and break the connection.
+⑥ Software Manipulation,"S2 ⑫ Stuff null, repeated, or endless response to the attackers."
+⑥ Software Manipulation,S2 ⑬ Output the data normally with some version variation.
+⑥ Software Manipulation,S2 ⑭ Redirect the access to another IP.
+⑥ Software Manipulation,S3 ⑤ Replace specific string in the requested content.
+⑥ Software Manipulation,S3 ⑨ Replace system-related string from the executed command.
+⑥ Software Manipulation,S3 ⑪ Show part of output only and break the connection.
+⑥ Software Manipulation,"S3 ⑫ Stuff null, repeated, or endless response to the attackers."
+⑥ Software Manipulation,S3 ⑬ Output the data normally with some version variation.
+⑥ Software Manipulation,S3 ⑭ Redirect the access to another IP.
+⑦ Information Manipulation,S2 ⑤ Replace specific string in the requested content.
+⑦ Information Manipulation,S2 ⑥ Intentionally leak some important information in the file.
+⑦ Information Manipulation,S2 ⑨ Replace system-related string from the executed command.
+⑦ Information Manipulation,S2 ⑬ Output the data normally with some version variation.
+⑦ Information Manipulation,S3 ⑤ Replace specific string in the requested content.
+⑦ Information Manipulation,S3 ⑨ Replace system-related string from the executed command.
+⑦ Information Manipulation,S3 ⑬ Output the data normally with some version variation.
+⑦ Information Manipulation,S3 ⑮ Add weak user to the system file.
+⑧ Network Manipulation,S2 ⑤ Replace specific string in the requested content.
+⑧ Network Manipulation,S2 ⑪ Show part of output only and break the connection.
+⑧ Network Manipulation,"S2 ⑫ Stuff null, repeated, or endless response to the attackers."
+⑧ Network Manipulation,S2 ⑭ Redirect the access to another IP.
+⑧ Network Manipulation,S3 ⑤ Replace specific string in the requested content.
+⑧ Network Manipulation,S3 ⑪ Show part of output only and break the connection.
+⑧ Network Manipulation,"S3 ⑫ Stuff null, repeated, or endless response to the attackers."
+⑧ Network Manipulation,S3 ⑭ Redirect the access to another IP.
+⑨ Hardware Manipulation,S2 ④ Block the access of the IP or port by the network filter.
+⑨ Hardware Manipulation,S2 ⑤ Replace specific string in the requested content.
+⑨ Hardware Manipulation,S2 ⑨ Replace system-related string from the executed command.
+⑨ Hardware Manipulation,S2 ⑪ Show part of output only and break the connection.
+⑨ Hardware Manipulation,"S2 ⑫ Stuff null, repeated, or endless response to the attackers."
+⑨ Hardware Manipulation,S2 ⑬ Output the data normally with some version variation.
+⑨ Hardware Manipulation,S2 ⑭ Redirect the access to another IP.
+⑨ Hardware Manipulation,S3 ⑤ Replace specific string in the requested content.
+⑨ Hardware Manipulation,S3 ⑨ Replace system-related string from the executed command.
+⑨ Hardware Manipulation,S3 ⑪ Show part of output only and break the connection.
+⑨ Hardware Manipulation,"S3 ⑫ Stuff null, repeated, or endless response to the attackers."
+⑨ Hardware Manipulation,S3 ⑬ Output the data normally with some version variation.
+⑨ Hardware Manipulation,S3 ⑭ Redirect the access to another IP.
+⑩ Security Controls,S1 ① Add a user with a weak password.
+⑩ Security Controls,S1 ② Remove specific user.
+⑩ Security Controls,S1 ③ Change password of specific user.
+⑩ Security Controls,S2 ⑥ Intentionally leak some important information in the file.
+⑩ Security Controls,S2 ⑦ Block the access of the command/action/file.
+⑩ Security Controls,S2 ⑩ Trigger the phishing email and stuff with fake data.
+⑩ Security Controls,S3 ⑩ Trigger the phishing email and stuff with fake data.
+⑩ Security Controls,S3 ⑮ Add weak user to the system file.
+⑪ Baseline,S2 ⑧ Revert the access of the command/action/file.
+⑪ Baseline,S2 ⑭ Redirect the access to another IP.
+⑪ Baseline,S3 ⑧ Revert the access of the command/action/file.
+⑪ Baseline,S3 ⑭ Redirect the access to another IP.
+⑪ Baseline,S3 ⑯ Kill processes launched by the attacker.
+⑫ Isolation,S2 ④ Block the access of the IP or port by the network filter.
+⑫ Isolation,S2 ⑦ Block the access of the command/action/file.
+⑫ Isolation,S2 ⑧ Revert the access of the command/action/file.
+⑫ Isolation,S3 ⑧ Revert the access of the command/action/file.
+⑬ Attack Vector Migration,S2 ⑤ Replace specific string in the requested content.
+⑬ Attack Vector Migration,S2 ⑥ Intentionally leak some important information in the file.
+⑬ Attack Vector Migration,S2 ⑩ Trigger the phishing email and stuff with fake data.
+⑬ Attack Vector Migration,S2 ⑭ Redirect the access to another IP.
+⑬ Attack Vector Migration,S3 ⑤ Replace specific string in the requested content.
+⑬ Attack Vector Migration,S3 ⑩ Trigger the phishing email and stuff with fake data.
+⑬ Attack Vector Migration,S3 ⑭ Redirect the access to another IP.
+⑬ Attack Vector Migration,S3 ⑮ Add weak user to the system file.
+⑭ Artifact Diversity,S2 ⑤ Replace specific string in the requested content.
+⑭ Artifact Diversity,S2 ⑨ Replace system-related string from the executed command.
+⑭ Artifact Diversity,S2 ⑬ Output the data normally with some version variation.
+⑭ Artifact Diversity,S3 ⑤ Replace specific string in the requested content.
+⑭ Artifact Diversity,S3 ⑨ Replace system-related string from the executed command.
+⑭ Artifact Diversity,S3 ⑬ Output the data normally with some version variation.

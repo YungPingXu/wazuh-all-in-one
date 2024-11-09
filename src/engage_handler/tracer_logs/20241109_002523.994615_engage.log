@@ -1,0 +1,20 @@
+20241109_002523.994755 engage     DEBUG      Server is run in RUNTIME mode.
+20241109_002622.156049 engage     DEBUG      [1] Accepted connection from "127.0.0.1:56388". Client id is 1.
+20241109_002622.934264 engage     SUCCESS    [1] Selected action is 3 "Remove all users.".
+20241109_002638.365176 engage     SUCCESS    [1] Next state is (1, ['', '', '', 'admin', 'asd', 'ens3', 'localhost', '127.0.0.1', '', ''], [2, 1, 6, 8, 10]).
+20241109_002638.365570 engage     SUCCESS    [1] Selected action is 7 "Redirect the access to another IP and allow command execution.".
+20241109_002649.597090 engage     SUCCESS    [1] Next state is (1, ['', '', '', 'admin', '12345', 'ens3', 'localhost', '127.0.0.1', '', ''], [2, 1, 6, 8, 10]).
+20241109_002649.597444 engage     SUCCESS    [1] Selected action is 10 "Output the executed command normally with some version variation.".
+20241109_002654.573559 engage     SUCCESS    [1] Next state is (1, ['', '', '', 'admin', '12345', 'ens3', 'localhost', '127.0.0.1', '', ''], [2, 1, 6, 8, 10]).
+20241109_002654.573853 engage     SUCCESS    [1] Selected action is 4 "Allow command execution and return output normally.".
+20241109_002740.619896 engage     DEBUG      [1] Disconnected from 127.0.0.1:56388 .
+20241109_002909.045236 engage     DEBUG      [2] Accepted connection from "127.0.0.1:60842". Client id is 2.
+20241109_002909.067523 engage     SUCCESS    [2] Selected action is 12 "Stuff repeated and endless response to the attackers.".
+20241109_002952.461721 engage     SUCCESS    [2] Next state is (1, ['', '', '', 'admin', 'asd', 'ens3', 'localhost', '127.0.0.1', '', ''], [6, 2, 1, 8, 10]).
+20241109_002952.461823 engage     SUCCESS    [2] Selected action is 6 "Block the access of the IP or port and allow command execution.".
+20241109_003136.364511 engage     DEBUG      [2] Disconnected from 127.0.0.1:60842 .
+20241109_003403.008669 engage     DEBUG      [3] Accepted connection from "127.0.0.1:40106". Client id is 3.
+20241109_003403.031413 engage     SUCCESS    [3] Selected action is 12 "Stuff repeated and endless response to the attackers.".
+20241109_003451.148916 engage     DEBUG      [4] Accepted connection from "127.0.0.1:34416". Client id is 4.
+20241109_003451.172600 engage     SUCCESS    [4] Selected action is 12 "Stuff repeated and endless response to the attackers.".
+20241109_003835.027912 engage     DEBUG      [4] Disconnected from 127.0.0.1:34416 .

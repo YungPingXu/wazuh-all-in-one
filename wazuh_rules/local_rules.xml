@@ -1,0 +1,298 @@
+<!-- Local rules -->
+
+<!-- Modify it at your will. -->
+<!-- Copyright (C) 2015, Wazuh Inc. -->
+
+<group name="process_monitor,">
+    <rule id="100001" level="10">
+        <if_sid>530</if_sid>
+        <regex>\Wsqlite3\W</regex>
+        <description>sqlite3 is running.</description>
+        <mitre>
+            <id>T1005</id>
+        </mitre>
+    </rule>
+
+    <rule id="100002" level="10">
+        <if_sid>530</if_sid>
+        <regex>\Wmysql\W</regex>
+        <description>mysql is running.</description>
+        <mitre>
+            <id>T1005</id>
+        </mitre>
+    </rule>
+
+    <rule id="100003" level="10">
+        <if_sid>530</if_sid>
+        <regex>\Wtcpdump\W</regex>
+        <description>tcpdump is running.</description>
+        <mitre>
+            <id>T1040</id>
+        </mitre>
+    </rule>
+
+    <rule id="100004" level="10">
+        <if_sid>530</if_sid>
+        <regex>\Wtshark\W</regex>
+        <description>tshark is running.</description>
+        <mitre>
+            <id>T1040</id>
+        </mitre>
+    </rule>
+
+    <rule id="100005" level="10">
+        <if_sid>530</if_sid>
+        <regex>\Wexport\W</regex>
+        <description>export is running.</description>
+        <mitre>
+            <id>T1059</id>
+        </mitre>
+    </rule>
+
+    <rule id="100006" level="10">
+        <if_sid>530</if_sid>
+        <regex>\Wpython\W</regex>
+        <description>python is running.</description>
+        <mitre>
+            <id>T1059</id>
+        </mitre>
+    </rule>
+
+    <rule id="100007" level="10">
+        <if_sid>530</if_sid>
+        <regex>\Wpython3\W</regex>
+        <description>python3 is running.</description>
+        <mitre>
+            <id>T1059</id>
+        </mitre>
+    </rule>
+
+    <rule id="100011" level="10">
+        <if_sid>530</if_sid>
+        <regex>\Wzip\W</regex>
+        <description>zip is running.</description>
+        <mitre>
+            <id>T1560</id>
+        </mitre>
+    </rule>
+
+    <rule id="100012" level="10">
+        <if_sid>530</if_sid>
+        <regex>\Wtar\W</regex>
+        <description>tar is running.</description>
+        <mitre>
+            <id>T1560</id>
+        </mitre>
+    </rule>
+
+    <rule id="100013" level="10">
+        <if_sid>530</if_sid>
+        <regex>\Wopenssl\W</regex>
+        <description>openssl is running.</description>
+        <mitre>
+            <id>T1560</id>
+            <id>T1110</id>
+            <id>T1078</id>
+        </mitre>
+    </rule>
+
+    <rule id="100014" level="10">
+        <if_sid>530</if_sid>
+        <regex>\Wdd\W</regex>
+        <description>dd is running.</description>
+        <mitre>
+            <id>T1485</id>
+        </mitre>
+    </rule>
+
+    <rule id="100015" level="10">
+        <if_sid>530</if_sid>
+        <regex>\Wrm\W</regex>
+        <description>rm is running.</description>
+        <mitre>
+            <id>T1485</id>
+        </mitre>
+    </rule>
+
+    <rule id="100016" level="10">
+        <if_sid>530</if_sid>
+        <regex>\Wrmdir\W</regex>
+        <description>rmdir is running.</description>
+        <mitre>
+            <id>T1485</id>
+        </mitre>
+    </rule>
+
+    <rule id="100017" level="10">
+        <if_sid>530</if_sid>
+        <regex>\Wsudo\W</regex>
+        <description>sudo is running.</description>
+        <mitre>
+            <id>T1548</id>
+        </mitre>
+    </rule>
+
+    <rule id="100018" level="10">
+        <if_sid>530</if_sid>
+        <regex>\Wvisudo\W</regex>
+        <description>visudo is running.</description>
+        <mitre>
+            <id>T1548</id>
+        </mitre>
+    </rule>
+
+    <rule id="100019" level="10">
+        <if_sid>530</if_sid>
+        <regex>\Wchown\W</regex>
+        <description>chown is running.</description>
+        <mitre>
+            <id>T1548</id>
+        </mitre>
+    </rule>
+
+    <rule id="100020" level="10">
+        <if_sid>530</if_sid>
+        <regex>\Wchmod\W</regex>
+        <description>chmod is running.</description>
+        <mitre>
+            <id>T1548</id>
+        </mitre>
+    </rule>
+
+    <rule id="100021" level="10">
+        <if_sid>530</if_sid>
+        <regex>\Wkubectl\W</regex>
+        <description>kubectl is running.</description>
+        <mitre>
+            <id>T1552</id>
+        </mitre>
+    </rule>
+
+    <rule id="100022" level="10">
+        <if_sid>530</if_sid>
+        <regex>\Wfind\W</regex>
+        <description>find is running.</description>
+        <mitre>
+            <id>T1552</id>
+            <id>T1083</id>
+        </mitre>
+    </rule>
+
+    <rule id="100023" level="10">
+        <if_sid>530</if_sid>
+        <regex>\Wuseradd\W</regex>
+        <description>useradd is running.</description>
+        <mitre>
+            <id>T1110</id>
+            <id>T1078</id>
+            <id>T1136</id>
+        </mitre>
+    </rule>
+
+    <rule id="100024" level="10">
+        <if_sid>530</if_sid>
+        <regex>\Wpasswd\W</regex>
+        <description>passwd is running.</description>
+        <mitre>
+            <id>T1110</id>
+            <id>T1078</id>
+            <id>T1136</id>
+        </mitre>
+    </rule>
+
+    <rule id="100025" level="10">
+        <if_sid>530</if_sid>
+        <regex>\Wpw\W</regex>
+        <description>pw is running.</description>
+        <mitre>
+            <id>T1110</id>
+            <id>T1078</id>
+            <id>T1136</id>
+        </mitre>
+    </rule>
+
+    <rule id="100026" level="10">
+        <if_sid>530</if_sid>
+        <regex>\Wchpasswd\W</regex>
+        <description>chpasswd is running.</description>
+        <mitre>
+            <id>T1110</id>
+            <id>T1078</id>
+            <id>T1136</id>
+        </mitre>
+    </rule>
+
+    <rule id="100027" level="10">
+        <if_sid>530</if_sid>
+        <regex>\Wsu\W</regex>
+        <description>su is running.</description>
+        <mitre>
+            <id>T1110</id>
+            <id>T1078</id>
+        </mitre>
+    </rule>
+
+    <rule id="100028" level="10">
+        <if_sid>530</if_sid>
+        <regex>\Wssh\W</regex>
+        <description>ssh is running.</description>
+        <mitre>
+            <id>T1110</id>
+        </mitre>
+    </rule>
+
+    <rule id="100029" level="10">
+        <if_sid>530</if_sid>
+        <regex>\Wls\W</regex>
+        <description>ls is running.</description>
+        <mitre>
+            <id>T1083</id>
+        </mitre>
+    </rule>
+
+    <rule id="100030" level="10">
+        <if_sid>530</if_sid>
+        <regex>\Wll\W</regex>
+        <description>ll is running.</description>
+        <mitre>
+            <id>T1083</id>
+        </mitre>
+    </rule>
+
+    <rule id="100031" level="10">
+        <if_sid>530</if_sid>
+        <regex>\Wcat\W</regex>
+        <description>cat is running.</description>
+        <mitre>
+            <id>T1083</id>
+        </mitre>
+    </rule>
+
+    <rule id="100032" level="10">
+        <if_sid>530</if_sid>
+        <regex>\Wfind\W</regex>
+        <description>find is running.</description>
+        <mitre>
+            <id>T1552</id>
+            <id>T1083</id>
+        </mitre>
+    </rule>
+
+    <rule id="100033" level="10">
+        <if_sid>530</if_sid>
+        <regex>\Wwhich\W</regex>
+        <description>which is running.</description>
+        <mitre>
+            <id>T1083</id>
+        </mitre>
+    </rule>
+
+    <rule id="100034" level="10">
+        <if_sid>530</if_sid>
+        <regex>\Wldapadd\W</regex>
+        <description>ldapadd is running.</description>
+        <mitre>
+            <id>T1136</id>
+        </mitre>
+    </rule>
+</group>

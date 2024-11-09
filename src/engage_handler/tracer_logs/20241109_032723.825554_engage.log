@@ -1,0 +1,13 @@
+20241109_032723.826064 engage     DEBUG      Server is run in RUNTIME mode.
+20241109_033434.965356 engage     DEBUG      [1] Accepted connection from "127.0.0.1:54410". Client id is 1.
+20241109_033435.484564 engage     SUCCESS    [1] Selected action is 4 "Allow command execution and return output normally.".
+20241109_033547.524568 engage     DEBUG      [1] Disconnected from 127.0.0.1:54410 .
+20241109_033622.951179 engage     DEBUG      [2] Accepted connection from "127.0.0.1:36604". Client id is 2.
+20241109_033622.973582 engage     SUCCESS    [2] Selected action is 14 "Trigger the phishing email and stuff with fake data and allow command execution.".
+20241109_033632.671310 engage     DEBUG      [3] Accepted connection from "127.0.0.1:41958". Client id is 3.
+20241109_033632.690417 engage     SUCCESS    [3] Selected action is 1 "Add a weak password for specific user.".
+20241109_033727.213150 engage     DEBUG      [3] Disconnected from 127.0.0.1:41958 .
+20241109_033742.751372 engage     DEBUG      [2] Disconnected from 127.0.0.1:36604 .
+20241109_034635.210026 engage     DEBUG      [4] Accepted connection from "127.0.0.1:35862". Client id is 4.
+20241109_034635.232659 engage     SUCCESS    [4] Selected action is 4 "Allow command execution and return output normally.".
+20241109_034834.851664 engage     DEBUG      [4] Disconnected from 127.0.0.1:35862 .

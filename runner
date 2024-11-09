@@ -1,0 +1,57 @@
+#!/bin/bash
+
+COWRIE_LOG_FILENAME='var/log/cowrie/cowrie.log'
+TELEGRAM_BOT_TOKEN='7228728506:AAFFtb5Y5VrIX0K6vtXNhwwgi7HnE3f7Jdo'
+RECEIVER_ID='7142679539'
+COWRIE_IDLE_TIME=60
+COWRIE_BOOT_TIME=300
+
+calculate_duration() {
+    file="$1"
+    modified_time=$(stat -c %Y "$file")
+    current_time=$(date +%s)
+    duration=$((current_time - modified_time))
+
+    echo "$duration"
+}
+
+send_telenotify() {
+    content="$1"
+
+    if [[ -n "$TELEGRAM_BOT_TOKEN" ]] && [[ -n "$RECEIVER_ID" ]] && [[ -n "$content" ]]
+    then
+        curl -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+        -d "chat_id=$RECEIVER_ID" \
+        -d "text=$content" > /dev/null 2>&1
+    fi
+}
+
+if [[ -f 'bin/cowrie' ]]
+then
+    if [[ -n $(pip freeze | grep Twisted) ]]
+    then
+        for ((;;))
+        do
+            if [[ -f "$COWRIE_LOG_FILENAME" ]] && [[ $(calculate_duration "$COWRIE_LOG_FILENAME") -lt $COWRIE_IDLE_TIME ]]
+            then
+                :
+            else
+                send_telenotify 'Cowrie 似乎已關閉或無回應'
+                echo 'Cowrie log file change NOT detected.'
+                bin/cowrie force-stop
+                bin/cowrie start
+
+                echo 'Wait for cowrie start ...'
+                sleep $COWRIE_BOOT_TIME
+                send_telenotify 'Cowrie 應該已啟動'
+                echo 'Wait for cowrie start ... Done'
+            fi
+
+            sleep 1
+        done
+    else
+        echo 'Can NOT find Twisted python package. Please check your environment.'
+    fi
+else
+    echo 'Can NOT find cowrie script. Please check your environment.'
+fi
