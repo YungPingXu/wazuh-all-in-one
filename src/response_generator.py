@@ -661,27 +661,27 @@ class ResponseGenerator:
 
         # In this case, match candidate login to the credentials provided by attacker.
         else:
-            is_logged_in = False
-            #is_logged_in = True
-            if attacker_ip in self.login_cand_collect:
-                accept_login = self.login_cand_collect[attacker_ip]
-            else:
-                accept_login = {}
+            #is_logged_in = False
+            is_logged_in = True
+            # if attacker_ip in self.login_cand_collect:
+            #     accept_login = self.login_cand_collect[attacker_ip]
+            # else:
+            #     accept_login = {}
 
-            # Match username in accepted login.
-            if username in accept_login:
-                # No restriction on password.
-                if len(accept_login[username]) == 0:
-                    log.msg(f'Attacker {attacker_ip} login with any password ({username},{password}).')
-                    is_logged_in = True
+            # # Match username in accepted login.
+            # if username in accept_login:
+            #     # No restriction on password.
+            #     if len(accept_login[username]) == 0:
+            #         log.msg(f'Attacker {attacker_ip} login with any password ({username},{password}).')
+            #         is_logged_in = True
 
-                # Apply restriction on password.
-                else:
-                    for accept_password in accept_login[username]:
-                        if password == accept_password:
-                            log.msg(f'Attacker {attacker_ip} login with exactly match ({username},{password}).')
-                            is_logged_in = True
-                            break
+            #     # Apply restriction on password.
+            #     else:
+            #         for accept_password in accept_login[username]:
+            #             if password == accept_password:
+            #                 log.msg(f'Attacker {attacker_ip} login with exactly match ({username},{password}).')
+            #                 is_logged_in = True
+            #                 break
 
             # Save login credential for successful login to match attacker session to its login credential later.
             # Only this info can be used to log in for same attacker and same username for now.

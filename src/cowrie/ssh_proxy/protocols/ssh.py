@@ -486,13 +486,11 @@ class SSH(base_protocol.BaseProtocol):
                                 if phrase in payload:
                                     self.rg.clearer_collect[attacker_id].remove(phrase)
                                     log.msg(f'Clearer for response generator cleared "{phrase}".')
-
                             # All clean job are done.
                             # Record current time as the start of attacker command execution.
                             if len(self.rg.clearer_collect[attacker_id]) == 0:
                                 log.msg('Timer for attacker command execution started.')
                                 self.last_prompt = datetime.now()
-
                                 # Clear history about responses from backend pool to attacker.
                                 log.msg('Backend pool response history is cleared.')
                                 self.rg.respHistory_collect[attacker_id].clear()

@@ -225,8 +225,8 @@ libvirt_uri = qemu:///system
 #     have the corresponding pubkey in root's authorized_keys (not implemented)
 # =====================================
 guest_config = default_guest.xml
-guest_privkey = ${honeypot:state_path}/ubuntu22.04-guest
-guest_tag = ubuntu22.04
+guest_privkey = ${honeypot:state_path}/ubuntu18.04-guest
+guest_tag = ubuntu18.04
 guest_ssh_port = 22
 guest_telnet_port = 23
 
@@ -333,7 +333,7 @@ pool_port = 6415
 
 # real credentials to log into backend
 backend_user = root
-backend_pass = lZupZLJVMS4UxVA8ZRVG
+backend_pass = root
 
 # Telnet prompt detection
 #
